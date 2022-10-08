@@ -4,6 +4,7 @@ window.onload = function() {
     let box = container.getElementsByTagName("div");
     let arr = [1,2,3,4,5,6,7,8,9];
     let turn = true;
+    let mouseOn = true;
 
     
     //iterating through list of divs
@@ -26,11 +27,15 @@ window.onload = function() {
                 each.classList.add("O");
             }
         })
+        each.addEventListener("mouseover", function(){
+                each.classList.add("hover");
+        });
 
+        each.addEventListener('mouseleave', function(){
+            each.classList.remove("hover");
+        })
     }
 
     
-    
-
   };
 
