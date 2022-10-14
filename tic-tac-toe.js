@@ -19,9 +19,13 @@ window.onload = function() {
         each.addEventListener("click", function(){
             //(turn === true) ? each.textContent = "X"  :each.textContent = "O";
             if (turn == true) {
-                each.textContent = "X";
-                turn = false;
-                each.classList.add("X");
+                //Exercise 6
+                if (each.textContent == ""){
+                    each.textContent = "X";
+                    turn = false;
+                    each.classList.add("X");
+                }
+
                  //Exercise 4
                 if (box[0].innerHTML == "X" && box[1].innerHTML == "X" && box[2].innerHTML == "X" ){
                     statusBox.className = "you-won";
@@ -50,9 +54,13 @@ window.onload = function() {
                 }
             }
             else{
-                each.textContent = "O";
-                turn = true;
-                each.classList.add("O");
+                //Exercise 6
+                if (each.textContent == ""){
+                    each.textContent = "O";
+                    turn = true;
+                    each.classList.add("O");
+                }
+
                  //Exercise 4
                 if (box[0].innerHTML == "O" && box[1].innerHTML == "O" && box[2].innerHTML == "O" ){
                     statusBox.className = "you-won";
