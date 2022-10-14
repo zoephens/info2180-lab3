@@ -6,6 +6,8 @@ window.onload = function() {
     let turn = true;
     //let mouseOn = true;
     let statusBox = document.getElementById("status");
+    let newGame = document.getElementById("game");
+    let btn = newGame.getElementsByClassName("btn");
 
     
     //iterating through list of divs
@@ -78,8 +80,9 @@ window.onload = function() {
                     statusBox.innerHTML = "Congratulations! O is the Winner!";
                 }
             }
+            console.log(turn);
         })
-        
+
         //Exercise 3
         each.addEventListener("mouseover", function(){
                 each.classList.add("hover");
@@ -87,9 +90,23 @@ window.onload = function() {
 
         each.addEventListener('mouseleave', function(){
             each.classList.remove("hover");
-        })
+        });
+
+
 
     }
+    //Exercise 5
+    btn[0].addEventListener("click", function(){
+        window.location.reload(true);
+        // for (let e = 0; e < 9; e++){
+        //     box[e].classList.remove("square");
+        //     box[e].innerHTML = "";
+        //     statusBox.className = "";
+        //     statusBox.innerHTML = "Move your mouse over a square and click to play an X or an O.";
+        //     turn = true;
+        // }
+
+    });
 
 
 
