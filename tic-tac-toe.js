@@ -69,45 +69,43 @@ window.onload = function() {
                         each.classList.add("O");
                     }
 
-                 //Exercise 4
-                 if (winner == true){
-                    if (box[0].innerHTML == "O" && box[1].innerHTML == "O" && box[2].innerHTML == "O" ){
-                        statusBox.className = "you-won";
-                        statusBox.innerHTML = "Congratulations! O is the Winner!";
-                        winner = false;
-                    } else if (box[3].innerHTML == "O" && box[4].innerHTML == "O" && box[5].innerHTML == "O" ){
-                        statusBox.className = "you-won";
-                        statusBox.innerHTML = "Congratulations! O is the Winner!";
-                        winner = false;
-                    } else if (box[6].innerHTML == "O" && box[7].innerHTML == "O" && box[8].innerHTML == "O" ){
-                        statusBox.className = "you-won";
-                        statusBox.innerHTML = "Congratulations! O is the Winner!";
-                        winner = false;
-                    } else if (box[0].innerHTML == "O" && box[3].innerHTML == "O" && box[6].innerHTML == "O" ){
-                        statusBox.className = "you-won";
-                        statusBox.innerHTML = "Congratulations! O is the Winner!";
-                        winner = false;
-                    } else if (box[1].innerHTML == "O" && box[4].innerHTML == "O" && box[7].innerHTML == "O" ){
-                        statusBox.className = "you-won";
-                        statusBox.innerHTML = "Congratulations! O is the Winner!";
-                        winner = false;
-                    } else if (box[2].innerHTML == "O" && box[5].innerHTML == "O" && box[8].innerHTML == "O" ){
-                        statusBox.className = "you-won";
-                        statusBox.innerHTML = "Congratulations! O is the Winner!";
-                        winner = false;
-                    }  else if (box[0].innerHTML == "O" && box[4].innerHTML == "O" && box[8].innerHTML == "O" ){
-                        statusBox.className = "you-won";
-                        statusBox.innerHTML = "Congratulations! O is the Winner!";
-                        winner = false;
-                    }  else if (box[2].innerHTML == "O" && box[4].innerHTML == "O" && box[6].innerHTML == "O" ){
-                        statusBox.className = "you-won";
-                        statusBox.innerHTML = "Congratulations! O is the Winner!";
-                        winner = false;
-                    }
-                 } else { winner = false;}
-                
+                    //Exercise 4
+                        if (box[0].innerHTML == "O" && box[1].innerHTML == "O" && box[2].innerHTML == "O" ){
+                            statusBox.className = "you-won";
+                            statusBox.innerHTML = "Congratulations! O is the Winner!";
+                            winner = false;
+                        } else if (box[3].innerHTML == "O" && box[4].innerHTML == "O" && box[5].innerHTML == "O" ){
+                            statusBox.className = "you-won";
+                            statusBox.innerHTML = "Congratulations! O is the Winner!";
+                            winner = false;
+                        } else if (box[6].innerHTML == "O" && box[7].innerHTML == "O" && box[8].innerHTML == "O" ){
+                            statusBox.className = "you-won";
+                            statusBox.innerHTML = "Congratulations! O is the Winner!";
+                            winner = false;
+                        } else if (box[0].innerHTML == "O" && box[3].innerHTML == "O" && box[6].innerHTML == "O" ){
+                            statusBox.className = "you-won";
+                            statusBox.innerHTML = "Congratulations! O is the Winner!";
+                            winner = false;
+                        } else if (box[1].innerHTML == "O" && box[4].innerHTML == "O" && box[7].innerHTML == "O" ){
+                            statusBox.className = "you-won";
+                            statusBox.innerHTML = "Congratulations! O is the Winner!";
+                            winner = false;
+                        } else if (box[2].innerHTML == "O" && box[5].innerHTML == "O" && box[8].innerHTML == "O" ){
+                            statusBox.className = "you-won";
+                            statusBox.innerHTML = "Congratulations! O is the Winner!";
+                            winner = false;
+                        }  else if (box[0].innerHTML == "O" && box[4].innerHTML == "O" && box[8].innerHTML == "O" ){
+                            statusBox.className = "you-won";
+                            statusBox.innerHTML = "Congratulations! O is the Winner!";
+                            winner = false;
+                        }  else if (box[2].innerHTML == "O" && box[4].innerHTML == "O" && box[6].innerHTML == "O" ){
+                            statusBox.className = "you-won";
+                            statusBox.innerHTML = "Congratulations! O is the Winner!";
+                            winner = false;
+                        }
+                }
+                console.log(turn);
             }
-            console.log(turn);
         })
 
         //Exercise 3
