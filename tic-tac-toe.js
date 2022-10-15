@@ -107,7 +107,7 @@ window.onload = function() {
                 }
                 console.log(turn);
             }
-        })
+        });
 
         //Exercise 3
         each.addEventListener("mouseover", function(){
