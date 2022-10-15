@@ -8,6 +8,7 @@ window.onload = function() {
     let statusBox = document.getElementById("status");
     let newGame = document.getElementById("game");
     let btn = newGame.getElementsByClassName("btn");
+    let winner = true;
 
     
     //iterating through list of divs
@@ -27,33 +28,42 @@ window.onload = function() {
                 }
 
                  //Exercise 4
-                if (box[0].innerHTML == "X" && box[1].innerHTML == "X" && box[2].innerHTML == "X" ){
-                    statusBox.className = "you-won";
-                    statusBox.innerHTML = "Congratulations! X is the Winner!";
-                } else if (box[3].innerHTML == "X" && box[4].innerHTML == "X" && box[5].innerHTML == "X" ){
-                    statusBox.className = "you-won";
-                    statusBox.innerHTML = "Congratulations! X is the Winner!";
-                } else if (box[6].innerHTML == "X" && box[7].innerHTML == "X" && box[8].innerHTML == "X" ){
-                    statusBox.className = "you-won";
-                    statusBox.innerHTML = "Congratulations! X is the Winner!";
-                } else if (box[0].innerHTML == "X" && box[3].innerHTML == "X" && box[6].innerHTML == "X" ){
-                    statusBox.className = "you-won";
-                    statusBox.innerHTML = "Congratulations! X is the Winner!";
-                } else if (box[1].innerHTML == "X" && box[4].innerHTML == "X" && box[7].innerHTML == "X" ){
-                    statusBox.className = "you-won";
-                    statusBox.innerHTML = "Congratulations! X is the Winner!";
-                } else if (box[2].innerHTML == "X" && box[5].innerHTML == "X" && box[8].innerHTML == "X" ){
-                    statusBox.className = "you-won";
-                    statusBox.innerHTML = "Congratulations! X is the Winner!";
-                }  else if (box[0].innerHTML == "X" && box[4].innerHTML == "X" && box[8].innerHTML == "X" ){
-                    statusBox.className = "you-won";
-                    statusBox.innerHTML = "Congratulations! X is the Winner!";
-                }  else if (box[2].innerHTML == "X" && box[4].innerHTML == "X" && box[6].innerHTML == "X" ){
-                    statusBox.className = "you-won";
-                    statusBox.innerHTML = "Congratulations! X is the Winner!";
-                }
-            }
-            else{
+                 if (winner == true) {
+                    if (box[0].innerHTML == "X" && box[1].innerHTML == "X" && box[2].innerHTML == "X" ){
+                        statusBox.className = "you-won";
+                        statusBox.innerHTML = "Congratulations! X is the Winner!";
+                        winner = false;
+                    } else if (box[3].innerHTML == "X" && box[4].innerHTML == "X" && box[5].innerHTML == "X" ){
+                        statusBox.className = "you-won";
+                        statusBox.innerHTML = "Congratulations! X is the Winner!";
+                        winner = false;
+                    } else if (box[6].innerHTML == "X" && box[7].innerHTML == "X" && box[8].innerHTML == "X" ){
+                        statusBox.className = "you-won";
+                        statusBox.innerHTML = "Congratulations! X is the Winner!";
+                        winner = false;
+                    } else if (box[0].innerHTML == "X" && box[3].innerHTML == "X" && box[6].innerHTML == "X" ){
+                        statusBox.className = "you-won";
+                        statusBox.innerHTML = "Congratulations! X is the Winner!";
+                        winner = false;
+                    } else if (box[1].innerHTML == "X" && box[4].innerHTML == "X" && box[7].innerHTML == "X" ){
+                        statusBox.className = "you-won";
+                        statusBox.innerHTML = "Congratulations! X is the Winner!";
+                        winner = false;
+                    } else if (box[2].innerHTML == "X" && box[5].innerHTML == "X" && box[8].innerHTML == "X" ){
+                        statusBox.className = "you-won";
+                        statusBox.innerHTML = "Congratulations! X is the Winner!";
+                        winner = false;
+                    }  else if (box[0].innerHTML == "X" && box[4].innerHTML == "X" && box[8].innerHTML == "X" ){
+                        statusBox.className = "you-won";
+                        statusBox.innerHTML = "Congratulations! X is the Winner!";
+                        winner = false;
+                    }  else if (box[2].innerHTML == "X" && box[4].innerHTML == "X" && box[6].innerHTML == "X" ){
+                        statusBox.className = "you-won";
+                        statusBox.innerHTML = "Congratulations! X is the Winner!";
+                        winner = false;
+                    }
+                } else {winner = false;}
+            } else{
                 //Exercise 6
                 if (each.textContent == ""){
                     each.textContent = "O";
@@ -62,31 +72,42 @@ window.onload = function() {
                 }
 
                  //Exercise 4
-                if (box[0].innerHTML == "O" && box[1].innerHTML == "O" && box[2].innerHTML == "O" ){
-                    statusBox.className = "you-won";
-                    statusBox.innerHTML = "Congratulations! O is the Winner!";
-                } else if (box[3].innerHTML == "O" && box[4].innerHTML == "O" && box[5].innerHTML == "O" ){
-                    statusBox.className = "you-won";
-                    statusBox.innerHTML = "Congratulations! O is the Winner!";
-                } else if (box[6].innerHTML == "O" && box[7].innerHTML == "O" && box[8].innerHTML == "O" ){
-                    statusBox.className = "you-won";
-                    statusBox.innerHTML = "Congratulations! O is the Winner!";
-                } else if (box[0].innerHTML == "O" && box[3].innerHTML == "O" && box[6].innerHTML == "O" ){
-                    statusBox.className = "you-won";
-                    statusBox.innerHTML = "Congratulations! O is the Winner!";
-                } else if (box[1].innerHTML == "O" && box[4].innerHTML == "O" && box[7].innerHTML == "O" ){
-                    statusBox.className = "you-won";
-                    statusBox.innerHTML = "Congratulations! O is the Winner!";
-                } else if (box[2].innerHTML == "O" && box[5].innerHTML == "O" && box[8].innerHTML == "O" ){
-                    statusBox.className = "you-won";
-                    statusBox.innerHTML = "Congratulations! O is the Winner!";
-                }  else if (box[0].innerHTML == "O" && box[4].innerHTML == "O" && box[8].innerHTML == "O" ){
-                    statusBox.className = "you-won";
-                    statusBox.innerHTML = "Congratulations! O is the Winner!";
-                }  else if (box[2].innerHTML == "O" && box[4].innerHTML == "O" && box[6].innerHTML == "O" ){
-                    statusBox.className = "you-won";
-                    statusBox.innerHTML = "Congratulations! O is the Winner!";
-                }
+                 if (winner == true){
+                    if (box[0].innerHTML == "O" && box[1].innerHTML == "O" && box[2].innerHTML == "O" ){
+                        statusBox.className = "you-won";
+                        statusBox.innerHTML = "Congratulations! O is the Winner!";
+                        winner = false;
+                    } else if (box[3].innerHTML == "O" && box[4].innerHTML == "O" && box[5].innerHTML == "O" ){
+                        statusBox.className = "you-won";
+                        statusBox.innerHTML = "Congratulations! O is the Winner!";
+                        winner = false;
+                    } else if (box[6].innerHTML == "O" && box[7].innerHTML == "O" && box[8].innerHTML == "O" ){
+                        statusBox.className = "you-won";
+                        statusBox.innerHTML = "Congratulations! O is the Winner!";
+                        winner = false;
+                    } else if (box[0].innerHTML == "O" && box[3].innerHTML == "O" && box[6].innerHTML == "O" ){
+                        statusBox.className = "you-won";
+                        statusBox.innerHTML = "Congratulations! O is the Winner!";
+                        winner = false;
+                    } else if (box[1].innerHTML == "O" && box[4].innerHTML == "O" && box[7].innerHTML == "O" ){
+                        statusBox.className = "you-won";
+                        statusBox.innerHTML = "Congratulations! O is the Winner!";
+                        winner = false;
+                    } else if (box[2].innerHTML == "O" && box[5].innerHTML == "O" && box[8].innerHTML == "O" ){
+                        statusBox.className = "you-won";
+                        statusBox.innerHTML = "Congratulations! O is the Winner!";
+                        winner = false;
+                    }  else if (box[0].innerHTML == "O" && box[4].innerHTML == "O" && box[8].innerHTML == "O" ){
+                        statusBox.className = "you-won";
+                        statusBox.innerHTML = "Congratulations! O is the Winner!";
+                        winner = false;
+                    }  else if (box[2].innerHTML == "O" && box[4].innerHTML == "O" && box[6].innerHTML == "O" ){
+                        statusBox.className = "you-won";
+                        statusBox.innerHTML = "Congratulations! O is the Winner!";
+                        winner = false;
+                    }
+                 } else { winner = false;}
+                
             }
             console.log(turn);
         })
