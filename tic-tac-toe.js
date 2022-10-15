@@ -19,6 +19,7 @@ window.onload = function() {
         //Exercise 2
         each.addEventListener("click", function(){
             //(turn === true) ? each.textContent = "X"  :each.textContent = "O";
+            //Exercise 6
             if (winner == true){
                 if (turn == true) {
                     //Exercise 6
